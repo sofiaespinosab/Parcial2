@@ -1,14 +1,16 @@
 package com.example.Service;
 
+import com.example.Service.CajaNegraService;
 import com.example.Model.LineaEvolutiva;
 import com.example.Model.Pokemon;
 import com.example.Util.PerformanceReporter;
+import lombok.NonNull;
 import lombok.extern.log4j.Log4j2;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import java.util.LinkedList;
 import java.util.Locale;
-
 
 @Log4j2
 public class EntrenamientoService {
@@ -95,5 +97,50 @@ public class EntrenamientoService {
 
         log.info("=== Fin de entrenamiento masivo | fase final: {} | xp acumulada: {} ===",
                 miPokemon.getFaseActual().getNombre(), miPokemon.getExperienciaAcumulada());
+    }
+
+
+    public static void iniciarCombateRotativo(
+            LinkedList<LineaEvolutiva> equipo,
+            Pokemon @NonNull [] horda,
+            int k,
+            CajaNegraService cajaNegra) {
+
+        int indiceEnemigo = 0;
+
+        while (indiceEnemigo < horda.length) {
+
+            LineaEvolutiva pokemonActual = equipo.removeFirst();
+
+            for (int i = 0; i < k && indiceEnemigo < horda.length; i++) {
+
+                Pokemon enemigoActual = horda[indiceEnemigo];
+                Pokemon faseAntes = pokemonActual.getFaseActual();
+
+                batallar(pokemonActual.getFaseActual(), enemigoActual);
+
+                pokemonActual.ganarExperiencia(XP_POR_VICTORIA);
+
+                if (pokemonActual.getFaseActual() != faseAntes) {
+                    log.info("¡Evolución! {} -> {}",
+                            faseAntes.getNombre(),
+                            pokemonActual.getFaseActual().getNombre());
+                }
+
+                cajaNegra.registrarVictoria(
+                        pokemonActual.getFaseActual().getNombre(),
+                        enemigoActual.getNombre());
+
+                indiceEnemigo++;
+            }
+
+            equipo.addLast(pokemonActual);
+        }
+
+        log.info("=== CAJA NEGRA FINAL ===");
+
+        for (var reporte : cajaNegra.getHistorial()) {
+            log.info(reporte.toString());
+        }
     }
 }
