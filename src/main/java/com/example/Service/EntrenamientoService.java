@@ -9,10 +9,7 @@ import org.apache.logging.log4j.Logger;
 
 import java.util.Locale;
 
-/**
- * Motor de simulación de batallas por turnos y procesamiento masivo de la horda
- * de entrenamiento (Horde Training).
- */
+
 @Log4j2
 public class EntrenamientoService {
 
@@ -20,11 +17,7 @@ public class EntrenamientoService {
     private static final int XP_POR_VICTORIA = 50;
     private static final int REPORTE_CADA_N_BATALLAS = 10_000;
 
-    /**
-     * Genera un arreglo de {@code cantidad} enemigos con las mismas estadísticas base.
-     * Las fases del jugador no evolucionan por estos nodos: son nodos "hoja"
-     * (experienciaRequerida = -1, sin siguienteEvolucion), ya que solo se usan como rivales.
-     */
+
     public static Pokemon[] generarHorda(int cantidad, String nombre, int hp, int ataque, int defensa) {
         Pokemon[] horda = new Pokemon[cantidad];
         for (int i = 0; i < cantidad; i++) {
@@ -33,11 +26,7 @@ public class EntrenamientoService {
         return horda;
     }
 
-    /**
-     * Simula una batalla por turnos entre el Pokémon del jugador y un enemigo.
-     * El Pokémon del jugador ataca primero. Ambos inician con su HP máximo.
-     * Daño = max(1, Ataque_Atacante - Defensa_Defensor).
-     */
+
     public static void batallar(Pokemon miPokemon, Pokemon enemigo) {
 
         miPokemon.recuperarVidaCompleta();
@@ -63,12 +52,7 @@ public class EntrenamientoService {
         }
     }
 
-    /**
-     * Reto de simulación (Parte B y C): enfrenta a miPokemon contra cada enemigo de
-     * la horda, otorga experiencia y evoluciona en tiempo de ejecución, mientras
-     * instrumenta tiempos de ejecución (nanoTime), footprint de objetos (JOL) y
-     * memoria del sistema (Oshi).
-     */
+
     public static void iniciarEntrenamientoMasivo(LineaEvolutiva miPokemon, Pokemon[] hordaEnemigos) {
 
         log.info("=== Inicio de entrenamiento masivo | tamaño de la horda: {} ===", hordaEnemigos.length);

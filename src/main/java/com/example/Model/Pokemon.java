@@ -2,10 +2,7 @@ package com.example.Model;
 
 import java.util.Objects;
 
-/**
- * Nodo de la lista enlazada. Representa una fase evolutiva de un Pokémon.
- * El puntero {@link #siguienteEvolucion} conecta este nodo con su siguiente fase.
- */
+
 public class Pokemon {
 
     private String nombre;
@@ -14,8 +11,7 @@ public class Pokemon {
     private int defensa;
     private int experienciaRequerida;
 
-    // HP de uso interno durante la simulación de batallas (no es parte del enunciado
-    // del nodo, pero es necesario para poder restar vida turno a turno).
+
     private int hpActual;
 
     private Pokemon siguienteEvolucion;

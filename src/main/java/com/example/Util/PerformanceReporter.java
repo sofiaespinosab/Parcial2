@@ -7,10 +7,7 @@ import oshi.SystemInfo;
 
 import java.util.Locale;
 
-/**
- * Utilidad de perfilamiento de rendimiento: mide el footprint de objetos en bytes
- * (JOL) y el estado de la memoria del sistema/JVM (OSHI).
- */
+
 @Log4j2(topic = "performance")
 public class PerformanceReporter {
 

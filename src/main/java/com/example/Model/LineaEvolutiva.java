@@ -2,12 +2,7 @@ package com.example.Model;
 
 import java.util.Objects;
 
-/**
- * Lista enlazada simple que representa la línea evolutiva completa de un Pokémon
- * propiedad del jugador. {@link #faseActual} funciona como el head virtual, que
- * avanza sobre los nodos {@link Pokemon} a medida que se cumplen los requisitos
- * de evolución.
- */
+
 public class LineaEvolutiva {
 
     private Pokemon faseActual;
@@ -26,21 +21,13 @@ public class LineaEvolutiva {
         return experienciaAcumulada;
     }
 
-    /**
-     * Suma experiencia al total acumulado y valida inmediatamente si hay evolución.
-     */
+
     public void ganarExperiencia(int experienciaGanada) {
         this.experienciaAcumulada += experienciaGanada;
         intentarEvolucionar();
     }
 
-    /**
-     * Mecanismo de evolución: valida si experienciaAcumulada >= experienciaRequerida
-     * de la faseActual. Si se cumple, faseActual avanza hacia siguienteEvolucion.
-     * Usa un ciclo por si la experiencia ganada alcanza para saltar más de una fase.
-     *
-     * @return true si hubo al menos una evolución.
-     */
+
     public boolean intentarEvolucionar() {
         boolean evoluciono = false;
 
