@@ -1,0 +1,18 @@
+2026-09-11 00:00:03 [main] INFO  com.example.Main - ########## PRUEBA UNITARIA: Charmander vs Rattata salvaje ##########
+2026-09-11 00:00:03 [main] INFO  com.example.Main - Rattata derrotado: true | HP restante de Charmander: 26
+2026-09-11 00:00:03 [main] INFO  com.example.Main - XP acumulada tras la prueba unitaria: 50
+2026-09-11 00:00:03 [main] INFO  com.example.Main - ########## PRUEBA DE ESTRÉS: 100000 Caterpie ##########
+2026-09-11 00:00:03 [main] INFO  com.example.Service.EntrenamientoService - === Inicio de entrenamiento masivo | tamaño de la horda: 100000 ===
+2026-09-11 00:00:05 [main] INFO  com.example.Service.EntrenamientoService - ¡Evolución! Charmander -> Charmeleon | tras derrotar al enemigo #30 | xp acumulada: 1500
+2026-09-11 00:00:05 [main] INFO  com.example.Service.EntrenamientoService - ¡Evolución! Charmeleon -> Charizard | tras derrotar al enemigo #100 | xp acumulada: 5000
+2026-09-11 00:00:05 [main] INFO  com.example.Service.EntrenamientoService - Progreso del entrenamiento: 10000 / 100000 enemigos derrotados | fase actual: Charizard
+2026-09-11 00:00:05 [main] INFO  com.example.Service.EntrenamientoService - Progreso del entrenamiento: 20000 / 100000 enemigos derrotados | fase actual: Charizard
+2026-09-11 00:00:05 [main] INFO  com.example.Service.EntrenamientoService - Progreso del entrenamiento: 30000 / 100000 enemigos derrotados | fase actual: Charizard
+2026-09-11 00:00:05 [main] INFO  com.example.Service.EntrenamientoService - Progreso del entrenamiento: 40000 / 100000 enemigos derrotados | fase actual: Charizard
+2026-09-11 00:00:05 [main] INFO  com.example.Service.EntrenamientoService - Progreso del entrenamiento: 50000 / 100000 enemigos derrotados | fase actual: Charizard
+2026-09-11 00:00:05 [main] INFO  com.example.Service.EntrenamientoService - Progreso del entrenamiento: 60000 / 100000 enemigos derrotados | fase actual: Charizard
+2026-09-11 00:00:05 [main] INFO  com.example.Service.EntrenamientoService - Progreso del entrenamiento: 70000 / 100000 enemigos derrotados | fase actual: Charizard
+2026-09-11 00:00:05 [main] INFO  com.example.Service.EntrenamientoService - Progreso del entrenamiento: 80000 / 100000 enemigos derrotados | fase actual: Charizard
+2026-09-11 00:00:05 [main] INFO  com.example.Service.EntrenamientoService - Progreso del entrenamiento: 90000 / 100000 enemigos derrotados | fase actual: Charizard
+2026-09-11 00:00:05 [main] INFO  com.example.Service.EntrenamientoService - Progreso del entrenamiento: 100000 / 100000 enemigos derrotados | fase actual: Charizard
+2026-09-11 00:00:05 [main] INFO  com.example.Service.EntrenamientoService - === Fin de entrenamiento masivo | fase final: Charizard | xp acumulada: 5000000 ===

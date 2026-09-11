@@ -1,0 +1,8 @@
+2026-09-11 00:00:05 [main] INFO  performance - Objeto 'LineaEvolutiva (inicial)' | tamaño superficial: 24 bytes | con referencias: 312 bytes
+2026-09-11 00:00:05 [main] INFO  performance - Objeto 'Pokemon (nodo inicial: Charmander)' | tamaño superficial: 40 bytes | con referencias: 288 bytes
+2026-09-11 00:00:05 [main] INFO  performance - Memoria JVM | usada: 12.81 MB | asignada: 24.00 MB | máxima: 5968.00 MB | uso: 53.36%
+2026-09-11 00:00:05 [main] INFO  performance - Memoria física | usada: 15756.80 MB | total: 23866.36 MB | disponible: 8109.56 MB
+2026-09-11 00:00:05 [main] INFO  performance - Objeto 'LineaEvolutiva (final)' | tamaño superficial: 24 bytes | con referencias: 120 bytes
+2026-09-11 00:00:05 [main] INFO  performance - Objeto 'Pokemon (nodo final: Charizard)' | tamaño superficial: 40 bytes | con referencias: 96 bytes
+2026-09-11 00:00:05 [main] INFO  performance - Memoria JVM | usada: 12.36 MB | asignada: 24.00 MB | máxima: 5968.00 MB | uso: 51.49%
+2026-09-11 00:00:05 [main] INFO  performance - Memoria física | usada: 15756.80 MB | total: 23866.36 MB | disponible: 8109.56 MB
