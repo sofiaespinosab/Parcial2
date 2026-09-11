@@ -10,8 +10,6 @@
 
 
         <Property name="log">Pokemon</Property>
-        <Property name="logperformance">Pokemon.Performance</Property>
-        <Property name="logtiempos">Pokemon.Tiempos</Property>
     </Properties>
 
 
@@ -35,31 +33,6 @@
         </RollingFile>
 
 
-        <RollingFile name="FileLoggerTiempos"
-                     fileName="${app_log_root}/${logtiempos}.log"
-                     filePattern="${app_log_root}/${logtiempos}-%d{yyyy-MM-dd}-%i.log.gz"
-                     append="true">
-            <PatternLayout pattern="${log_pattern}"/>
-            <Policies>
-                <TimeBasedTriggeringPolicy interval="1" modulate="true"/>
-                <SizeBasedTriggeringPolicy size="100MB"/>
-            </Policies>
-            <DefaultRolloverStrategy max="7"/>
-        </RollingFile>
-
-
-        <RollingFile name="FileLoggerPerformance"
-                     fileName="${app_log_root}/${logperformance}.log"
-                     filePattern="${app_log_root}/${logperformance}-%d{yyyy-MM-dd}-%i.log.gz"
-                     append="true">
-            <PatternLayout pattern="${log_pattern}"/>
-            <Policies>
-                <TimeBasedTriggeringPolicy interval="1" modulate="true"/>
-                <SizeBasedTriggeringPolicy size="100MB"/>
-            </Policies>
-            <DefaultRolloverStrategy max="7"/>
-        </RollingFile>
-
     </Appenders>
 
 
@@ -74,16 +47,6 @@
         <Logger name="com.example" level="info" additivity="false">
             <AppenderRef ref="Console"/>
             <AppenderRef ref="FileLogger"/>
-        </Logger>
-
-        <Logger name="tiempos" level="debug" additivity="false">
-            <AppenderRef ref="FileLoggerTiempos"/>
-            <AppenderRef ref="Console"/>
-        </Logger>
-
-        <Logger name="performance" level="debug" additivity="false">
-            <AppenderRef ref="FileLoggerPerformance"/>
-            <AppenderRef ref="Console"/>
         </Logger>
 
     </Loggers>

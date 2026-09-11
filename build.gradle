@@ -26,12 +26,6 @@ dependencies {
     compileOnly("org.projectlombok:lombok:1.18.42")
     annotationProcessor("org.projectlombok:lombok:1.18.42")
 
-
-    implementation("org.openjdk.jol:jol-core:0.17")
-
-
-    implementation("com.github.oshi:oshi-core:6.8.3")
-
 }
 
 test {
